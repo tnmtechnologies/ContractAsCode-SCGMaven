@@ -30,7 +30,7 @@ import javax.validation.constraints.*;
 @Consumes({ "application/json" })
 @Produces({ "application/json" })
 @io.swagger.annotations.Api(description = "the pets API")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2017-09-13T09:07:45.024-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2017-09-13T09:12:18.683-04:00")
 public class PetsApi  {
    private final PetsApiService delegate;
 
@@ -111,5 +111,20 @@ public class PetsApi  {
 ,@Context SecurityContext securityContext)
     throws NotFoundException {
         return delegate.findPets(tags,limit,securityContext);
+    }
+    @PUT
+    @Path("/{id}")
+    @Consumes({ "application/json" })
+    @Produces({ "application/json" })
+    @io.swagger.annotations.ApiOperation(value = "", notes = "updates a single pet based on the ID supplied", response = Pet.class, tags={  })
+    @io.swagger.annotations.ApiResponses(value = { 
+        @io.swagger.annotations.ApiResponse(code = 200, message = "pet response", response = Pet.class),
+        
+        @io.swagger.annotations.ApiResponse(code = 200, message = "unexpected error", response = Pet.class) })
+    public Response updatePet(@ApiParam(value = "ID of pet to delete",required=true) @PathParam("id") Long id
+,@ApiParam(value = "Pet to add to the store" ,required=true) NewPet pet
+,@Context SecurityContext securityContext)
+    throws NotFoundException {
+        return delegate.updatePet(id,pet,securityContext);
     }
 }
