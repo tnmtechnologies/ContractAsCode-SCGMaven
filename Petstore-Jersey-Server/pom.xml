@@ -28,7 +28,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<inputSpec>C:\Users\tedep\eclipse-workspace-sbc2017\Expanded Pet Store\implementation\src\models\petstore.yaml</inputSpec>
+							<inputSpec>C:\Users\Ted\workspaceRZen\ContractAsCode-SCGMaven\Petstore-Jersey-Server\src\models\petstore.yaml</inputSpec>
 							<output>.</output>
 							<language>jaxrs</language>
 							<configOptions>
