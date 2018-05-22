@@ -28,7 +28,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<inputSpec>C:\Users\Ted\workspaceRZen\ContractAsCode-SCGMaven\Petstore-Jersey-Server\src\models\petstore.yaml</inputSpec>
+							<inputSpec>src\models\petstore.yaml</inputSpec>
 							<output>.</output>
 							<language>jaxrs</language>
 							<configOptions>
