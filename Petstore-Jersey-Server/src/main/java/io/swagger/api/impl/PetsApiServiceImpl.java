@@ -39,4 +39,9 @@ public class PetsApiServiceImpl extends PetsApiService {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
+    @Override
+    public Response updatePet(final Long id, final NewPet pet, final SecurityContext securityContext) throws NotFoundException {
+        // do some magic!
+        return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
+    }
 }
